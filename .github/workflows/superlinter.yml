@@ -1,0 +1,14 @@
+name: Super-Linter
+on: push
+jobs:
+  super-lint:
+    name: Lint code base
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: npm install build test
+      run: |
+        npm install
+        npm run build --if-present
+        npm test
