@@ -13,13 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
-        uses: actions/checkout@v2
+    # Checks out a copy of your repository on the ubuntu-latest machine
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      # Installation des dépendences, build du projet et exécution des tests
-      - name: npm install build test
-      - run: |
-          npm install
-          npm run build --if-present
-          npm test
+    # Installation des dépendences, build du projet et exécution des tests
+    - name: npm install build test
+    - run: |
+        npm install
+        npm run build --if-present
+        npm test
